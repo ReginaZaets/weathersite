@@ -1,8 +1,8 @@
-const key = "b61161c396f0353ae2491f4c8b857073";
+const key = "865e99d5db39ddb7a49c55e485e80dbf";
 
-export const getWeather = async (city: string) => {
+export const getCurrentWeather = async (city: string) => {
   const response = await fetch(
-    `http://api.weatherstack.com/current?access_key=${key}&query=${city}`
+    `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${key}`
   );
   if (!response.ok) {
     throw new Error(`Ошибка сервера: ${response.status}`);
