@@ -14,7 +14,7 @@ import Loader from "../Loader/Loader";
 import { WeatherProps } from "../../lib/types";
 import { filterFutureWeather } from "../../lib/function";
 import ListItem from "../ListItem/ListItem";
-import { getCurrentWeather } from "../../api/getWeather";
+import { getCurrentWeather } from "../../api/getweather";
 
 const Main = () => {
   const { inputUser } = useInputUser();
