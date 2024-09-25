@@ -17,10 +17,6 @@ const Search = () => {
       setError("Ввод не может содержать пробелы.");
       return false;
     }
-    if (/[^a-zA-Z0-9]/.test(value)) {
-      setError("Ввод может содержать только латинские буквы, цифры и дефисы.");
-      return false;
-    }
     setError(null);
     return true;
   };

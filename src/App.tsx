@@ -1,8 +1,12 @@
 import "./App.css";
-import MainPage from "./components/page/MainPage";
+import { AppRoutes } from "./AppRouter";
 
 function App() {
-  return <MainPage />;
+  return (
+    <>
+      <AppRoutes />
+    </>
+  );
 }
 
 export default App;
