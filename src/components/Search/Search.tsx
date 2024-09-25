@@ -43,7 +43,9 @@ const Search = () => {
           onChange={handleSearch}
           data-testid="search"
         />
-        <SeachButton onClick={handleSearchClick}>Поиск</SeachButton>
+        <SeachButton data-testid="button" onClick={handleSearchClick}>
+          Поиск
+        </SeachButton>
       </SeachCommon>
 
       {error && <p style={{ color: "red" }}>{error}</p>}

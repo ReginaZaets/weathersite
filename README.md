@@ -1,50 +1,25 @@
-# React + TypeScript + Vite
+# Прогноз погоды в реальном времени.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### Запуск проекта npm run dev
 
-Currently, two official plugins are available:
+### Тестирование npm run test
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Сборка проекта npm run build
 
-## Expanding the ESLint configuration
+## Функционал 
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+Доступна главная страница для поиска погоды в любом городе. 
+1. На странице есть поле ввода, куда можно ввести любой город. 
+- Если город существует, то погода отобразится на странице. 
+- Пока погода загружается, на странице надпись "данные загружаются", как только загрузилась - надпись пропадает.
+- Если города не существует, то появится надпись "такого города не существует".
+- У поля ввода есть валидация, пользователь не может ввести пробел, ошибки отображаются ниже поля ввода.
+2. После поиска города на странице отображается погода на текущий день и на последующие 5 дней вперед.
+- В табличке указаны дата, максимальная и минимальная температура, скорость ветра, влажность и иконка погоды.
+3. Добавлены тесты, которые проходят проверку.
+- Тест на корректную работу функции.
+- Тест на наличие поля ввода, и что введенные данные соответствуют написаному.
+- Тест на наличие ошибки, если в поле ввода нет текста, то появится ошибка.
+4. Дополнительный функционал.
+- Есть страница 404 - не найдено. При переходе на несуществующую страницу, появляется кнопка для перехода на главную.
+- Добавлен контекст для использования поля ввода.

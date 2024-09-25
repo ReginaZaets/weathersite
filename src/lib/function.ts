@@ -24,8 +24,7 @@ export const filterFutureWeather = (data: WeatherProps[]) => {
         daysMap[day] = item;
       }
     }
-    console.log("Текущая дата:", today.toISOString());
-    console.log("Дата из API:", itemDate.toISOString());
+
   });
 
   return Object.values(daysMap);

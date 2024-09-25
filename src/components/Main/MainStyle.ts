@@ -8,6 +8,13 @@ export const MainContainer = styled.div`
 
 export const MainText = styled.h2`
   text-align: center;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 25px;
+  @media (max-width: 768px) {
+    font-size: 20px;
+    font-style: normal;
+  }
 `;
 
 export const PageButton = styled.div`
@@ -84,5 +91,25 @@ export const MainItemBox = styled.div`
   @media (max-width: 768px) {
     grid-template-columns: repeat(1, 1fr);
     justify-content: center;
+  }
+`;
+
+export const MainH1 = styled.h1`
+  font-style: normal;
+  font-weight: 400;
+  font-size: 25px;
+  @media (max-width: 768px) {
+    font-size: 20px;
+    font-style: normal;
+  }
+`;
+
+export const MainH2 = styled.h2`
+  font-style: normal;
+  font-weight: 400;
+  font-size: 25px;
+  @media (max-width: 768px) {
+    font-size: 20px;
+    font-style: normal;
   }
 `;

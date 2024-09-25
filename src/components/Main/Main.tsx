@@ -1,5 +1,8 @@
+import React from "react";
 import {
   MainContainer,
+  MainH1,
+  MainH2,
   MainItem,
   MainItemBox,
   MainItemWeather,
@@ -7,11 +10,11 @@ import {
 } from "./MainStyle";
 import { useInputUser } from "../../context/hooks/inputUser";
 import { useEffect, useState } from "react";
-import { getCurrentWeather } from "../../api/getweather";
 import Loader from "../Loader/Loader";
 import { WeatherProps } from "../../lib/types";
 import { filterFutureWeather } from "../../lib/function";
 import ListItem from "../ListItem/ListItem";
+import { getCurrentWeather } from "../../api/getWeather";
 
 const Main = () => {
   const { inputUser } = useInputUser();
@@ -53,12 +56,12 @@ const Main = () => {
       {!isLoading && !isError && currentCity && currentWeather.length > 0 && (
         <>
           <MainItem>
-            <h1>Текущая погода в городе {currentCity?.name}</h1>
+            <MainH1 data-testid="city">Текущая погода в городе {currentCity?.name}</MainH1>
             <ListItem weather={currentWeather[0]} />
           </MainItem>
 
           <MainItemWeather>
-            <h2>Прогноз на 5 дней</h2>
+            <MainH2>Прогноз на 5 дней</MainH2>
             <MainItemBox>
               {futureWeather.slice(0, 6).map((item) => (
                 <div key={item.dt}>

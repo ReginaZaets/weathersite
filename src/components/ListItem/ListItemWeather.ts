@@ -17,7 +17,10 @@ export const ListContainer = styled.div`
   @media (max-width: 768px) {
     width: 270px;
     font-size: 12px;
-    gap: 50px;
+    gap: 30px;
+    justify-content: flex-start;
+    font-style: normal;
+    font-weight: 400;
   }
 `;
 
@@ -32,4 +35,24 @@ export const TempList = styled.p`
   flex-direction: column;
   align-items: flex-start;
   gap: 10px;
+`;
+
+export const ListenP = styled.p`
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  @media (max-width: 768px) {
+    font-size: 12px;
+    font-style: normal;
+  }
+`;
+
+export const ListSpan = styled.span`
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  @media (max-width: 768px) {
+    font-size: 12px;
+    font-style: normal;
+  }
 `;
