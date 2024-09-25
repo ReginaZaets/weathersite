@@ -17,10 +17,6 @@ const Search = () => {
       setError("Ввод не может содержать пробелы.");
       return false;
     }
-    if (/[^a-zA-Z0-9]/.test(value)) {
-      setError("Ввод может содержать только латинские буквы, цифры и дефисы.");
-      return false;
-    }
     setError(null);
     return true;
   };
@@ -47,7 +43,9 @@ const Search = () => {
           onChange={handleSearch}
           data-testid="search"
         />
-        <SeachButton onClick={handleSearchClick}>Поиск</SeachButton>
+        <SeachButton data-testid="button" onClick={handleSearchClick}>
+          Поиск
+        </SeachButton>
       </SeachCommon>
 
       {error && <p style={{ color: "red" }}>{error}</p>}

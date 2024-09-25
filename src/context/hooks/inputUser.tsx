@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { InputContext } from "../inputContext";
 
+
 export function useInputUser() {
   const context = useContext(InputContext);
   if (!context) {
